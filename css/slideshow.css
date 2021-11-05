@@ -1,0 +1,19 @@
+
+
+section {}
+
+#main .footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    color: #ddd;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    width:100%
+}
+
+#main .footer>div {
+    flex: 1;
+    padding: 1em;
+}

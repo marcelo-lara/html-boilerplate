@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo's Template</title>
+    <meta name="description" content="HTML5 Template">
+    <meta name="author" content="SitePoint">
+    <meta property="og:title" content="HTML5 Template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:image" content="image.png">
+    <link rel="stylesheet" href="css/awsm.min.css">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+</head>
+<body>
+
+    <!-- sidebar menu -->
+    <div id="sidenav-open">☰</div>
+    <div id="sidenav">
+        <div id="sidenav-title">
+            Index
+            <span id="sidenav-close">×</span>
+        </div>
+        <h2>Section</h2>
+        <div>
+            <a href="#">Link to First</a>
+            <a href="#">Link to Second</a>
+            <a class="selected" href="#">Maecenas sit</a>
+            <a href="#">Nulla facilisi</a>
+        </div>
+        <h2>Section</h2>
+        <div>
+            <a href="#">Link to First</a>
+            <a href="#">Link to Second</a>
+            <a href="#">Maecenas sit</a>
+            <a href="#">Nulla facilisi</a>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div id="main">
+
+        <section class="first">
+            <div>This is text1</div>
+        </section>
+
+        <section class="second">
+            <div>Second</div>
+        </section>
+
+        <section class="third">
+            <div>Third</div>
+        </section>
+
+        <div class="footer">
+            <div class="prev"> prev </div>
+            <div class="next"> next </div>
+        </div>
+    </div>
+
+
+    <script>
+        const sidebar = {
+            menu: undefined,
+            content: undefined,
+            close: () => {
+                sidebar.menu.style.left = "-230px";
+                sidebar.content.style.marginLeft = 0
+            },
+            open: ()=>{
+                sidebar.menu.style.left = "0";
+                sidebar.content.style.marginLeft = "230px"
+            },
+            init: ()=>{
+                sidebar.menu = document.getElementById("sidenav");
+                sidebar.content = document.getElementById("main");
+                document.getElementById("sidenav-close").addEventListener("click", sidebar.close);
+                document.getElementById("sidenav-open").addEventListener("click", sidebar.open);
+            }
+        };
+        sidebar.init();
+        
+    </script>
+
+</body>
+</html>

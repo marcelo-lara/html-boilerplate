@@ -19,6 +19,7 @@
 
 
     <!-- sidebar menu -->
+    <div id="sidenav-open">☰</div>
     <div id="sidenav">
         <div id="sidenav-title">
             Index
@@ -40,23 +41,8 @@
         </div>
     </div>
 
+    <!-- content -->
     <div id="main">
-
-        <!-- list -->
-        <ul>
-            <li>
-                <a href="#">Link to First</a>
-            </li>
-            <li>
-                <a href="#">Link to Second</a>
-            </li>
-            <li>
-                <a href="#">Maecenas sit</a>
-            </li>
-            <li>
-                <a href="#">Nulla facilisi</a>
-            </li>
-        </ul>
 
         <!-- base elements -->
         <h1>H1 First Title</h1>
@@ -78,34 +64,25 @@
 
         </section>
         
+        <!-- list -->
+        <ul>
+            <li>
+                <a href="#">Link to First</a>
+            </li>
+            <li>
+                <a href="#">Link to Second</a>
+            </li>
+            <li>
+                <a href="#">Maecenas sit</a>
+            </li>
+            <li>
+                <a href="#">Nulla facilisi</a>
+            </li>
+        </ul>
 
     </div>
 
-    <div id="sidenav-open">☰</div>
-
-    <script>
-        const sidebar = {
-            menu: undefined,
-            content: undefined,
-            close: () => {
-                sidebar.menu.style.left = "-230px";
-                sidebar.content.style.marginLeft = 0
-            },
-            open: ()=>{
-                sidebar.menu.style.left = "0";
-                sidebar.content.style.marginLeft = "230px"
-            },
-            init: ()=>{
-                sidebar.menu = document.getElementById("sidenav");
-                sidebar.content = document.getElementById("main");
-                document.getElementById("sidenav-close").addEventListener("click", sidebar.close);
-                document.getElementById("sidenav-open").addEventListener("click", sidebar.open);
-            }
-        };
-
-        sidebar.init();
-        
-    </script>
+    <script src="js/sidebar.js" type="text/javascript"></script>
 
 </body>
 </html>
