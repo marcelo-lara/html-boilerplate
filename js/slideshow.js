@@ -8,6 +8,16 @@ const slideshow={
         document.querySelector("#slide-prev")?.addEventListener("click", slideshow.prev);
         slideshow.canvas = document.getElementById("slides");
 
+        // map sidenav
+        for(let aa of document.querySelectorAll("#sidenav a")){
+            if(aa.hasAttribute('href') && aa.hasAttribute('slide') ){
+                aa.addEventListener("click", (e)=>{
+                    e.preventDefault();
+                    slideshow.showbyname(e.target.getAttribute('slide'));
+                });
+            }
+        }
+
         // hide slides
         slideshow.slides = document.querySelectorAll("#slideshow>div")
         for(let slide of slideshow.slides)
@@ -15,6 +25,10 @@ const slideshow={
         
         // display initial slide
         slideshow.show(slideshow.current);
+    },
+
+    showbyname: (s)=>{
+        console.log(s);
     },
 
     show: (n)=>{
