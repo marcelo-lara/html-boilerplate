@@ -16,11 +16,13 @@ body {
 }
 
 #main {
-    margin-left: var(--sidenav-width)
+    margin-left: var(--sidenav-width);
+    padding-left: 1em;
+    top: 0;
 }
 
 /* sidenav */
-#sidenav-switch{
+#sidenav-open{
     display: inline-block;
     position: fixed;
     top:0; left:0;
@@ -32,6 +34,7 @@ body {
     cursor: pointer;
     z-index: 1;
 }
+
 #sidenav-close{
     float: right;
     cursor: pointer;
@@ -45,16 +48,14 @@ body {
 
 }
 #sidenav {
-    position: -webkit-sticky;
-    position: sticky;
-    padding: .5em;
-    top: 0px;
-
+    position: fixed;
+    top:0; left:0;
     height: 100%;
     z-index: 2;
-    top:0; left:0;
-
+    transition: left 0.5s; 
     width: var(--sidenav-width);
+
+    overflow: hidden;
 
     border-right: 1px solid #eee;
     background-color: #fafafa;

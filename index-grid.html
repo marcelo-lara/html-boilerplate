@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/awsm.min.css">
+
+    <style>
+        body,html{height: 100vh;margin:0}
+        .container {
+            display: grid; 
+            grid-template-columns: 0.5fr 1.5fr; 
+            grid-template-rows: 0.2fr 2.6fr 0.2fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              "header  title"
+              "sidenav content"
+              "sidenav footer"; 
+            height: 100%;
+          }
+          .header { grid-area: header; background-color: blue; }
+          .title { grid-area: title;background-color: cyan; }
+          .sidenav { grid-area: sidenav; background-color: red;}
+          .content { grid-area: content; background-color: orange;}
+          .help   { grid-area: help;background-color: olive; }
+          .footer { grid-area: footer; background-color: grey;}
+
+          .hide {display: none;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="sidenav">sidenav</div>
+
+        <div class="title">title</div>
+        <div class="content">
+        
+            content
+        
+        </div>
+        <div class="help hide">help</div>
+
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
