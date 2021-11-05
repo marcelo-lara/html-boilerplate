@@ -1,6 +1,9 @@
 # HTML/CSS boilerplate
 
-##
+## Components
+
+### Sidebar Menu
+
 
 ## Credits
 
