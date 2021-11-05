@@ -1,19 +1,35 @@
 
-
-section {}
-
-#main .footer {
-    position: absolute;
-    bottom: 0;
-    background-color: #000;
-    color: #ddd;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-    width:100%
+#slideshow {
+    height: 100%;
+    overflow: none;
 }
 
-#main .footer>div {
-    flex: 1;
-    padding: 1em;
+#slideshow>div{
+    display: inline-block;
+    width: inherit;
+    position: relative;
+    height: 100%;
+}
+
+#slideshow-buttons{
+    display: inline;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    white-space: nowrap;
+}
+
+#slideshow-buttons>div{
+    background-color: #000;
+    padding: .5em;
+    color: #eee;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+/* help block */
+#slideshow div.help{
+    float: right;
+    width: 20%;
 }

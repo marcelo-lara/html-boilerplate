@@ -1,10 +1,15 @@
 /* theme */
+*{
+    box-sizing: content-box;
+}
+
 :root {
     --main-color: #333;
     --line-color: #666;
 
     --accent-color: rgb(0, 100, 193);
     --accent-color-50: rgba(0, 100, 193, 0.5);
+    --accent-color-25: rgba(0, 100, 193, 0.25);
 
     --sidenav-width: 230px;
     --sidenav-bullet-width: 8px;
@@ -76,14 +81,21 @@ body {
     padding: .2em .5em;
     text-decoration: none;
     border-left: var(--sidenav-bullet-width) solid transparent;
+    transition: border-color .2s;
+    transition: background-color .5s;
 }
 #sidenav a {
     color: var(--sidenav-link-color)
 }
 #sidenav a:hover {
     border-left-color: var(--accent-color-50);
+    background-color: var(--accent-color-25);
 }
 
 #sidenav a.selected {
     border-left-color: var(--accent-color);
+}
+#sidenav a.selected:hover {
+    border-left-color: var(--accent-color);
+    background-color: transparent;
 }
