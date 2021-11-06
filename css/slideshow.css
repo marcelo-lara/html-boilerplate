@@ -5,10 +5,13 @@
 }
 
 #slideshow>div{
-    display: inline-block;
+    display: none;
     width: inherit;
     position: relative;
     height: 100%;
+}
+#slideshow>div.selected{
+    display: inline-block;
 }
 
 #slideshow-buttons{
