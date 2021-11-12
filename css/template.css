@@ -6,21 +6,28 @@
 :root {
     --main-color: #333;
     --line-color: #666;
+    --main-background-color: #fff;
 
     --accent-color: rgb(0, 100, 193);
     --accent-color-50: rgba(0, 100, 193, 0.5);
-    --accent-color-25: rgba(0, 100, 193, 0.25);
+    --accent-color-25: rgba(0, 100, 193, 0.1);
 
     --sidenav-width: 230px;
-    --sidenav-bullet-width: 8px;
+    --sidenav-bullet-width: .25rem;
+    --sidenav-bullet-width-2: 4px;
     --sidenav-link-color: var(--main-color);
 }
-
+html {
+	scroll-behavior: smooth;
+    cursor: default;
+    user-select: none;
+}
 body {
     margin: 0
 }
 
 #main {
+    color: var(--main-color);
     margin-left: var(--sidenav-width);
     padding-left: 1em;
     top: 0;
@@ -31,8 +38,7 @@ body {
     display: inline-block;
     position: fixed;
     top:0; left:0;
-    padding: .5em;
-    border: 1px solid rgb(202, 202, 202);
+    padding: .25em 0;
     border-radius: .2em;
     background-color: rgb(238, 238, 238);
     margin: 2px;
@@ -43,6 +49,10 @@ body {
 #sidenav-close{
     float: right;
     cursor: pointer;
+    padding: 0 0.5rem;
+}
+#sidenav-close:hover{
+    background-color: var(--accent-color-25);
 }
 
 #sidenav-title {
@@ -59,11 +69,15 @@ body {
     z-index: 2;
     transition: left 0.5s; 
     width: var(--sidenav-width);
-
+    margin:0;
     overflow: hidden;
-
     border-right: 1px solid #eee;
     background-color: #fafafa;
+}
+
+#sidenav li {
+    display: block;
+    margin: 0
 }
 
 #sidenav h2:first-child {
@@ -75,25 +89,50 @@ body {
     background-color: #ddd;
     padding: 0.5em;
 }
+#sidenav li>ul {
+    margin-left: 1em;
+}
 
 #sidenav a {
     display:block;
     padding: .2em .5em;
     text-decoration: none;
-    border-left: var(--sidenav-bullet-width) solid transparent;
+    border-right: var(--sidenav-bullet-width) solid transparent;
     transition: border-color .2s;
     transition: background-color .5s;
+}
+#sidenav li>ul a{
+    font-size: 1rem;
+}
+
+/* first level */
+#sidenav>ul>li>a{ 
+    font-weight: 600;
+}
+#sidenav>ul>li.on>a{ 
+    border-right: 0;
 }
 #sidenav a {
     color: var(--sidenav-link-color)
 }
+#sidenav li.on > a{
+    border-right-color: var(--accent-color-50);
+}
+
+#main h2{
+    position: sticky;
+    top: 0;    
+    background-color: var(--main-background-color);
+    border-bottom: 1px solid var(--line-color);
+}
+
 #sidenav a:hover {
-    border-left-color: var(--accent-color-50);
+    border-right-color: var(--accent-color-50);
     background-color: var(--accent-color-25);
 }
 
 #sidenav a.selected {
-    border-left-color: var(--accent-color);
+    border-right-color: var(--accent-color);
 }
 #sidenav a.selected:hover {
     border-left-color: var(--accent-color);
