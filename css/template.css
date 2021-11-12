@@ -121,7 +121,9 @@ body {
 
 #main h2{
     position: sticky;
-    top: 0;    
+    top:0;
+    margin-top:0;
+    border-top: .5em solid var(--main-background-color);
     background-color: var(--main-background-color);
     border-bottom: 1px solid var(--line-color);
 }
