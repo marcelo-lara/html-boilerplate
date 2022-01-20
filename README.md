@@ -1,10 +1,15 @@
 # HTML/CSS boilerplate
 
-## Components
+## 01 basic html
 
-### Sidebar Menu
+## 02 side navigation
 
+## 03 slideshow
+
+## 04 quiz
+
+## 05 report
 
 ## Credits
 
-- [igoradamenko/awsm.css](https://github.com/igoradamenko/awsm.css)
+- CSS reset from [igoradamenko/awsm.css](https://github.com/igoradamenko/awsm.css)

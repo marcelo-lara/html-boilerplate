@@ -1,0 +1,39 @@
+body{
+    margin:0
+}
+
+
+/* left nav */
+
+#nav {
+    background-color: blueviolet;
+    float: left;
+}
+
+#nav ul, #nav li{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+#nav a{
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+
+/* section */
+section {
+    display:flex; 
+    flex-direction: row;
+}
+section>div{
+    flex-grow: 1;
+}
+
+section .body {
+    background-color: darkgoldenrod;
+}
+
+section .plots {
+    background-color: coral;
+}

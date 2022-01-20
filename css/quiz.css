@@ -1,0 +1,148 @@
+body,
+html {
+    cursor: default;
+    margin:0; 
+    padding: 0;
+    box-sizing: content-box;
+    background-color: #eee;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+article {
+    border-bottom: 1px solid #999;
+    padding: .5rem 0 1rem 0
+}
+
+h2 {
+    margin: 0;
+    font-size: 7rem;
+    font-family: system-ui;
+    text-align: right;
+    color: #666;
+    line-height: 5.5rem;
+}
+
+
+/* layout */
+
+.wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section>div {
+    flex: 1 1 auto;
+}
+
+.index {
+    flex: 1 1 20rem;
+    min-width: 10rem;
+    max-width: 12rem;
+    padding: 0 1rem;
+}
+
+div.index p {
+    text-align: right;
+}
+
+
+/* hover */
+article {
+    padding: .5rem;
+    transition: background 1s;
+    background: linear-gradient(90deg,#eee,#eee);
+
+}
+
+article:hover {
+    background: linear-gradient(135deg,#e1eaf1,#cfcddb);
+}
+
+
+/* Sticky Header */
+section {
+    position: relative;
+}
+
+section>div.index {
+    position: sticky;
+    top: 8px
+}
+
+
+/* Questions */
+article {
+    display: flex;
+    flex-direction: row;
+}
+div.question{
+    min-width: 30%;
+    max-width: 40%;
+    width: 30%;
+    padding: .5rem;    
+}
+div.answer{
+    width: 70%;
+}
+
+
+div.welcome{
+    background-color: #cfcddb;
+    margin:0 0 2rem;
+    padding: 0;
+    top:0;
+    display: block;
+    padding: 2em;
+}
+
+div.welcome h1{
+    font-size: 3rem;
+    font-family: system-ui;
+
+}
+
+/*////////////////////////////////////////////////////////////*/
+/* answers */
+div.answer.radio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+div.answer.radio>div{
+    width: 8rem;
+    height: 8rem;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: rgba(255, 255, 255, 0.789);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: .25em;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    transition: transform .5s, background-color 1s;
+}
+
+div.answer.radio>div:hover{
+    transform: scale(1.05, 1.05);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+div.answer>div.on{
+    background: #12609d;
+    color: #fff;
+    background: linear-gradient(135deg,#187dca,#3fa8f4);
+}
+
+div.answer.radio>div.on:hover{
+    transform: none;
+}
